@@ -18,6 +18,8 @@ namespace WebUI.Controllers
 
         public CustomersController()
         {
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("http://localhost:5000/api/");
         }
 
         #region Index
